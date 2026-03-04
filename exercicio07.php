@@ -10,9 +10,9 @@
     <h1>Maior Horário: </h1>
     <form method="POST">
         <label>Primeiro Horário: </label>
-        <input type="number" name="primeiroHorario" id="primeiroHorario"/><br>
+        <input type="real" name="primeiroHorario" id="primeiroHorario"/><br>
         <label>Segundo Horário: </label>
-        <input type="number" name="segundoHorario" id="segundoHorario"/><br><br>
+        <input type="real" name="segundoHorario" id="segundoHorario"/><br><br>
         <button type="submit">Enviar
             <?php 
                 $primeiroHorario = $_POST['primeiroHorario'];
@@ -24,5 +24,6 @@
             <?php echo $resultado; ?>
         </h1>
     </form>
+    <button><a href="index.php">Voltar</a></button>
 </body>
 </html>
