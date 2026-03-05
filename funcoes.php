@@ -127,21 +127,25 @@
         return "A média é: $media";
     }
 
-    //9. Leia números até que a soma ultrapasse 100 !!FINALIZAR
-    function ultrapasseCem($numero){
-        $maiorCem = 0;
-        $numero = 0;
-        while($maiorCem < 100){
-            $maiorCem = $maiorCem + $numero;
-            if((float)$numero >= 100){
-                return "Ultrapassou de 100! Seu valor: $numero";
-            }else{
-                return "Continue... Valor: $numero";
-            }
-        }
+    //9. Leia números até que a soma ultrapasse 100
+    function soma($num1,$num2,$num3,$num4,$num5){
+       $soma = ($num1 + $num2 + $num3 + $num4 + $num5);
+       if($soma >= 100){
+        return "Ultrapassou o 100! Seu valor: $soma";
+       }else{
+        return "Não atingiu o 100! Seu valor: $soma";
+       }
     }
 
     //10. Solicite senhas até que uma válida seja informada !!FINALIZAR
+    function senhaValida($senha){
+        $senhaCorreta = 1505;
+        if($senha == $senhaCorreta){
+            return "Acesso liberado!";
+        }else{
+            return "Erro. Tente novamente.";
+        }
+    }
 
     //11. Classifique uma pessoa com base na idade: criança, jovem, adulto, idoso
     function classificandoIdade($idade){
@@ -162,6 +166,43 @@
             return "$numero é par";
         }else{
             return "$numero é ímpar";
+        }
+    }
+    //Exercícios de revisão
+
+    //13. Leia dois números e exiba o maior deles
+    function maior($num1,$num2){
+        if($num1 > $num2){
+            return "$num1 é maior que $num2";
+        }else{
+            return "$num2 é maior que $num1";
+        }
+    }
+
+    //14. Crie uma matriz identidade 4x4
+    function matriz4x4($matriz){
+        for($linha=0;$linha<=3;$linha++){
+            for($coluna=0;$coluna<=3;$coluna++){
+                if($linha == $coluna){
+                    $matriz[$linha][$coluna] = 1;
+                }else{
+                    $matriz[$linha][$coluna] = 0;
+                }
+            }
+        }
+
+        for($linha=0;$linha<=3;$linha++){
+            for($coluna=0;$coluna<=3;$coluna++){
+                echo $matriz[$linha][$coluna]." ";
+            }
+            echo "<br>";
+        }
+    }
+
+    //15. Imprima os números de 1 a 100 com para
+    function numerosUmACem($numeros){
+        for($i=1;$i<=100;$i++){
+            echo $i." "." "." ";
         }
     }
 ?>
