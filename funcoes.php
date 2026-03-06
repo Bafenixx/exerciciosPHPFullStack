@@ -168,7 +168,7 @@
             return "$numero é ímpar";
         }
     }
-    //Exercícios de revisão
+    //--------------------------- Exercícios de revisão -----------------------------
 
     //13. Leia dois números e exiba o maior deles
     function maior($num1,$num2){
@@ -202,7 +202,64 @@
     //15. Imprima os números de 1 a 100 com para
     function numerosUmACem($numeros){
         for($i=1;$i<=100;$i++){
-            echo $i." "." "." ";
+            echo $i." "." ";
         }
+    }
+
+    //16. Leia 10 números inteiros e armazene em um vetor, Mostre os pares
+    function pares($numeros){
+        foreach($numeros as $valor){
+            if($valor % 2 == 0){
+                echo $valor."<br>";
+            }
+        }
+    }
+
+    //17. Verifique se um número é múltiplo de 3 e de 5 ao mesmo tempo
+    function multiplo($numero){
+        if($numero % 3 == 0 && $numero % 5 == 0){
+            return "$numero é múltiplo de 5 e de 3";
+        }else if($numero % 3 == 0){
+            return "$numero é múltiplo apenas de 3";
+        }else if($numero % 5 == 0){
+            return "$numero é múltiplo apenas de 5";
+        }else{
+            return "Não é múltiplo de nenhum dos dois";
+        }
+    }
+
+    //18. Leia três valores e verifique se formam um triângulo equilátero, isósceles ou escaleno
+    function triangulo($lado1, $lado2, $lado3){
+        if($lado1 == $lado2 && $lado2 == $lado3 && $lado1 == $lado3){
+            return "Equilátero";
+        }else if($lado1 != $lado2 && $lado2 != $lado3 && $lado1 != $lado3){
+            return "Escaleno";
+        }else{
+            return "Isósceles";
+        }
+    }
+
+    //19. Leia uma matriz 3x3 e imprima sua diagonal principal
+    function matriz3x3($principal){
+        for($linha=0;$linha<=2;$linha++){
+            for($coluna=0;$coluna<=2;$coluna++){
+                echo $principal[$linha][$coluna]." ";
+            }
+            echo "<br>";
+        }
+
+        for($linha=0;$linha<=2;$linha++){
+            for($coluna=0;$coluna<=2;$coluna++){
+                if($linha == $coluna){
+                    echo $principal[$linha][$coluna]; 
+                }
+            }
+        }
+    }
+
+    //20. Leia idades com enquanto até uma idade negativa ser digitada, mostra a média
+    function idades($idade1,$idade2,$idade3,$idade4,$idade5, $media){
+        (float)$media = $idade1+$idade2+$idade3+$idade4+$idade5 / 5;
+        return "Média de idades: ".$media;
     }
 ?>

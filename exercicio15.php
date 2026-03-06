@@ -8,7 +8,7 @@
 <body>
     <?php include('funcoes.php'); ?>
     <h1>Números de 1 a 100: </h1>
-    <?php $numeros = numerosUmaCem($numeros); ?>
+    <?php $numeros = numerosUmACem($numeros); ?>
     <?php 
         echo $numeros;
     ?><br><br>
